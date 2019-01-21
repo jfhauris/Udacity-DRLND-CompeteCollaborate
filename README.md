@@ -1,6 +1,6 @@
 # Udacity-DRLND-CompeteCollaborate
 
-# Project 1: Navigation
+# Project 3: Competition / Collaboration
 
 ### Introduction
 
