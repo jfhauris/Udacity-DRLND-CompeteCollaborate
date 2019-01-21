@@ -4,25 +4,11 @@
 
 ### Introduction
 
-For this project I used a Double Deep Q-Learning (DQN) algorithm with Experience Replay to train an agent to navigate 
-through a field of yellow and pruple bananas.  The goal is to collect the yellow bananas and avoid the purple bananas.
-The environment is a large square world.  
+For this project I used a MARL (multi-dagent) version of DDPG (Deep Deterministic Policy Gradient) algorithm with Experience Replay to train 2 agents to cooperate at playing a game of "tennis".  The 2 agents control tennis rackets that have 2 actions:  move in the x direction and have a "jump" or "hit" action.  The rackets are to keep the ball in the air hitting back and forth over the net.  Each time the ball goes over the net the reward is +0.1.  If the ball hits the ground or goes out of bounds the reward is -0.01.  The goal is to keep the ball in play and gain a total reward of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents).  
 
-![Trained Agent][image1]
+The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation.
 
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  
-Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
-
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception 
-of objects around agent's forward direction.  
-Given this information, the agent has to learn how to best select actions.  
-Four discrete actions are available, corresponding to:
-- **`0`** - move forward.
-- **`1`** - move backward.
-- **`2`** - turn left.
-- **`3`** - turn right.
-
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
+The control actions are continous, as is the state space.  
 
 ### Getting Started
 
