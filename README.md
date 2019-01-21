@@ -10,6 +10,8 @@ The observation space consists of 8 variables corresponding to the position and 
 
 The control actions are continous, as is the state space.  
 
+The results of training saves the network parameters in the folder /models/by_score/.
+
 ### Getting Started
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
